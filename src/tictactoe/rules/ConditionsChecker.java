@@ -26,7 +26,7 @@ public class ConditionsChecker {
         for (int line = 0; line < grid.length; line++) {
             boolean isCompleteRow = true;
             if (grid[line][0] == GridSymbol.SPACE.getChar()) {
-                break;
+                continue;
             }
             for (int column = 1; column < grid.length; column++) {
                 if (grid[line][0] != grid[line][column]) {
@@ -45,7 +45,7 @@ public class ConditionsChecker {
         for (int column = 0; column < grid.length; column++) {
             boolean isCompleteColumn = true;
             if (grid[0][column] == GridSymbol.SPACE.getChar()) {
-                break;
+                continue;
             }
             for (int line = 1; line < grid.length; line++) {
                 if (grid[0][column] != grid[line][column]) {

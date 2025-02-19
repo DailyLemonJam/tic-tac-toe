@@ -5,7 +5,7 @@ public class ConsoleRenderer implements Renderer {
     public void render(char[][] grid) {
         // Column numbers
         System.out.print("  ");
-        for (int i = 0; i < grid[0].length; i++) {
+        for (int i = 0; i < grid.length; i++) {
             System.out.print(i + 1);
             System.out.print(' ');
         }

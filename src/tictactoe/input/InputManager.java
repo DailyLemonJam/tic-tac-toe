@@ -57,9 +57,7 @@ public class InputManager {
                 }
                 int line = Character.getNumericValue(input.charAt(0)) - 1;
                 int column = Character.getNumericValue(input.charAt(1)) - 1;
-                char chosenChar = grid[line][column];
-                if (chosenChar != GridSymbol.X.getChar()
-                        && chosenChar != GridSymbol.O.getChar()) {
+                if (grid[line][column] == GridSymbol.SPACE.getChar()) {
                     return new PlayerResponse(line, column);
                 }
             } catch (Exception _) {
