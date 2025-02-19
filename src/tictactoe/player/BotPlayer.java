@@ -32,6 +32,14 @@ public class BotPlayer extends Player {
         // 2nd option is a little bit boring and will probably cause bots to place symbols in line by line
         // That's why 1st option was chosen
 
+        // Simulation of the thought process (just for immersion, can be removed if necessary)
+        try {
+            int millisToWait = new Random().nextInt(200, 1000);
+            Thread.sleep(millisToWait);
+        } catch (InterruptedException _) {
+            // Will never happen, just for sleep method
+        }
+
         // Check for potential win
         var response = checkRows(grid, getPlayerSymbol());
         if (response.shouldReturn()) {
